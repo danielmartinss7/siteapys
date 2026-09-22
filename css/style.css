@@ -281,6 +281,17 @@ button { font: inherit; cursor: pointer; }
 
 .header-logo .logo { height: 44px; width: auto; }
 
+/* Sobre o hero amarelo (topo da página) o cabeçalho usa a versão escura;
+   ao rolar (fundo azul) ou com o menu mobile aberto, volta para a clara. */
+.header-logo .logo--on-dark { display: none; }
+.site-header.is-scrolled .logo--on-light,
+.nav-open .site-header .logo--on-light { display: none; }
+.site-header.is-scrolled .logo--on-dark,
+.nav-open .site-header .logo--on-dark { display: block; }
+
+.site-header:not(.is-scrolled) .nav-toggle span { background: var(--navy); }
+.nav-open .site-header .nav-toggle span { background: var(--white); }
+
 /* Botão hambúrguer (mobile) */
 .nav-toggle {
   position: relative;
@@ -350,10 +361,11 @@ body.nav-open { overflow: hidden; }
   padding: calc(var(--header-h) + 3rem) 0 4rem;
   overflow: hidden;
   text-align: center;
-  /* Brilho radial sutil para dar profundidade */
+  /* Versão "abelha preta sobre fundo amarelo" do manual de aplicações,
+     com um brilho radial sutil para dar profundidade */
   background:
-    radial-gradient(ellipse at 50% 40%, rgba(0, 59, 126, .75), transparent 65%),
-    var(--navy);
+    radial-gradient(ellipse at 50% 40%, rgba(255, 214, 140, .7), transparent 65%),
+    var(--gold);
 }
 
 .hero-inner {
@@ -365,7 +377,6 @@ body.nav-open { overflow: hidden; }
 .hero-logo { margin: .5rem 0 2rem; }
 .hero-logo .logo {
   width: min(78vw, 520px);
-  filter: drop-shadow(0 6px 24px rgba(0, 0, 0, .35));
   animation: hero-in 1.2s var(--ease) both;
 }
 
@@ -377,7 +388,7 @@ body.nav-open { overflow: hidden; }
   font-weight: 500;
   font-size: clamp(1.5rem, 5vw, 2.4rem);
   line-height: 1.3;
-  color: var(--paper);
+  color: var(--ink);
 }
 
 /* Selo/carimbo decorativo girando lentamente */
@@ -386,8 +397,8 @@ body.nav-open { overflow: hidden; }
   right: -60px;
   bottom: -60px;
   width: 220px;
-  color: var(--gold);
-  opacity: .18;
+  color: var(--wine);
+  opacity: .16;
   pointer-events: none;
 }
 .hero-stamp svg { animation: spin 40s linear infinite; }
@@ -1175,6 +1186,13 @@ body.nav-open { overflow: hidden; }
     transition: background-color .25s, color .25s;
   }
   .main-nav .nav-cta:hover { background: var(--gold); color: var(--navy); }
+
+  /* Menu escuro enquanto está sobre o hero amarelo */
+  .site-header:not(.is-scrolled) .main-nav a { color: var(--navy); }
+  .site-header:not(.is-scrolled) .main-nav a:hover { color: var(--wine); }
+  .site-header:not(.is-scrolled) .main-nav a:not(.nav-cta)::after { background: var(--wine); }
+  .site-header:not(.is-scrolled) .main-nav .nav-cta { border-color: var(--navy); }
+  .site-header:not(.is-scrolled) .main-nav .nav-cta:hover { background: var(--navy); color: var(--gold); }
 
   .header-logo .logo { height: 52px; width: auto; }
 
