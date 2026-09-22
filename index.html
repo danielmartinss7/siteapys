@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apys Produções — Produtora Audiovisual Independente</title>
+  <meta name="description" content="Apys Produções: produtora audiovisual independente brasileira. Documentários, curtas, edição, branding e conteúdo para redes sociais que valorizam a presença feminina e a memória cultural brasileira.">
+  <meta name="theme-color" content="#051A59">
+
+  <!-- Open Graph (compartilhamento em redes sociais) -->
+  <meta property="og:title" content="Apys Produções">
+  <meta property="og:description" content="Nenhuma colmeia se constrói com uma abelha só.">
+  <meta property="og:type" content="website">
+  <!-- TODO: adicionar imagem de compartilhamento (1200x630) -->
+  <!-- <meta property="og:image" content="assets/img/og-image.jpg"> -->
+
+  <link rel="icon" type="image/png" href="assets/img/logo-apys-marinho.png">
+
+  <!-- Tipografia: Fraunces (serifada, retrô) para títulos + Work Sans (sans-serif) para corpo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Marca que o JS está ativo (as animações de scroll só são aplicadas com JS) -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- Link de acessibilidade: pula direto para o conteúdo -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- =====================================================
+       CABEÇALHO / NAVEGAÇÃO
+       ===================================================== -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="#home" class="header-logo" aria-label="Apys Produções — voltar ao início">
+        <img class="logo" src="assets/img/logo-apys-branco.png" alt="Apys" width="921" height="603">
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Menu principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato" class="nav-cta">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- =====================================================
+         1. HOME / HERO
+         ===================================================== -->
+    <section class="hero section--navy" id="home">
+      <div class="container hero-inner">
+        <p class="eyebrow eyebrow--gold">Produtora audiovisual independente</p>
+
+        <h1 class="hero-logo">
+          <img class="logo" src="assets/img/logo-apys-dourado.png" alt="Apys Produções" width="921" height="603">
+        </h1>
+
+        <p class="hero-tagline reveal">
+          “Nenhuma colmeia se constrói<br class="br-desktop"> com uma abelha só.”
+        </p>
+
+        <a href="#contato" class="btn btn--gold reveal">Solicite um orçamento</a>
+      </div>
+
+      <!-- Selo decorativo estilo carimbo postal -->
+      <div class="hero-stamp" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs>
+            <path id="stamp-circle" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/>
+          </defs>
+          <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 5"/>
+          <circle cx="100" cy="100" r="56" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text font-size="14" fill="currentColor" textLength="440" lengthAdjust="spacing">
+            <textPath href="#stamp-circle">APYS PRODUÇÕES • AUDIOVISUAL • BRASIL • </textPath>
+          </text>
+          <!-- Hexágono (favo de mel) -->
+          <polygon points="100,70 126,85 126,115 100,130 74,115 74,85" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         2. SOBRE NÓS
+         ===================================================== -->
+    <section class="section section--paper" id="sobre">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">Sobre nós</p>
+          <h2 class="section-title">Uma colmeia que nasceu na sala de aula</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <!-- TODO: substituir pelo texto final da história da produtora -->
+            <p>
+              A Apys Produções nasceu como <strong>projeto de conclusão de curso técnico</strong>:
+              um grupo de estudantes com vontade de contar histórias que não costumam
+              ganhar espaço nas telas. O que começou como trabalho acadêmico virou
+              propósito — e o propósito virou uma <strong>produtora audiovisual independente</strong>.
+            </p>
+            <p>
+              Hoje seguimos trabalhando como uma colmeia: cada integrante com seu papel,
+              todos construindo juntos narrativas com sensibilidade, pesquisa e cuidado
+              em cada quadro.
+            </p>
+          </div>
+
+          <!-- Missão em formato de "selo postal" -->
+          <aside class="mission-card reveal" aria-labelledby="missao-titulo">
+            <div class="mission-inner">
+              <h3 id="missao-titulo" class="mission-title">Nossa missão</h3>
+              <p>
+                Produzir narrativas audiovisuais que valorizem a presença feminina e
+                resgatem a memória cultural brasileira, por meio de documentários e
+                conteúdos personalizados.
+              </p>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Equipe -->
+        <h3 class="subsection-title reveal">A equipe</h3>
+        <ul class="team-grid">
+          <!--
+            Para adicionar foto: troque o <div class="team-photo"> por
+            <img class="team-photo" src="assets/img/equipe/nome.jpg" alt="Foto de Nome">
+          -->
+          <li class="team-card reveal">
+            <div class="team-photo" aria-hidden="true">J</div>
+            <h4 class="team-name">Joana</h4>
+            <p class="team-role">Diretora Geral e Diretora de Fotografia</p>
+          </li>
+          <li class="team-card reveal">
+            <div class="team-photo" aria-hidden="true">IF</div>
+            <h4 class="team-name">Isabelly Fernandes</h4>
+            <p class="team-role">Direção de Arte e Roteiro</p>
+          </li>
+          <li class="team-card reveal">
+            <div class="team-photo" aria-hidden="true">JS</div>
+            <h4 class="team-name">Julia Santana</h4>
+            <p class="team-role">Direção Financeira e de Som</p>
+          </li>
+          <li class="team-card reveal">
+            <div class="team-photo" aria-hidden="true">LP</div>
+            <h4 class="team-name">Lucca Prevideli</h4>
+            <p class="team-role">Pós-produção e Marketing</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         3. SERVIÇOS OFERECIDOS
+         ===================================================== -->
+    <section class="section section--wine" id="servicos">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow eyebrow--gold">Serviços</p>
+          <h2 class="section-title">O que produzimos</h2>
+        </header>
+
+        <ul class="services-grid">
+          <li class="service-card reveal">
+            <!-- Ícone: claquete -->
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11h16v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8Z"/><path d="m4 11-.6-3.4a1 1 0 0 1 .8-1.2l13.8-2.4a1 1 0 0 1 1.2.8L19.6 7 4 11Z"/><path d="m8.5 5.5 2 4M13.5 4.6l2 4"/></svg>
+            <h3>Documentários e curtas-metragens</h3>
+            <p>Da pesquisa à finalização, contamos histórias reais e ficcionais com olhar autoral.</p>
+          </li>
+          <li class="service-card reveal">
+            <!-- Ícone: tesoura / corte -->
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg>
+            <h3>Edição audiovisual</h3>
+            <p>Montagem, ritmo, cor e som para dar forma e emoção ao seu material bruto.</p>
+          </li>
+          <li class="service-card reveal">
+            <!-- Ícone: pincel / paleta -->
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1 0 1.5-.8 1.5-1.5 0-.9-.7-1.2-.7-2 0-.8.7-1.5 1.5-1.5H16a5 5 0 0 0 5-5c0-4.4-4-8-9-8Z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7.5" r="1"/></svg>
+            <h3>Identidade visual e branding</h3>
+            <p>Marcas com personalidade: logotipo, paleta, tipografia e aplicações.</p>
+          </li>
+          <li class="service-card reveal">
+            <!-- Ícone: celular -->
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/><path d="m10 8 4 2.5-4 2.5V8Z"/></svg>
+            <h3>Conteúdo para redes sociais</h3>
+            <p>Vídeos, reels e peças pensadas para engajar sua comunidade com autenticidade.</p>
+          </li>
+          <li class="service-card reveal">
+            <!-- Ícone: caneta / roteiro -->
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+            <h3>Desenvolvimento narrativo e roteirização</h3>
+            <p>Estruturamos sua ideia em roteiro: argumento, personagens e arco narrativo.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         4. COMO FUNCIONA (linha do tempo)
+         ===================================================== -->
+    <section class="section section--paper" id="como-funciona">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">Como funciona</p>
+          <h2 class="section-title">Do primeiro contato à entrega</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-step reveal">
+            <span class="step-number">01</span>
+            <h3>Contato</h3>
+            <p>Você nos conta sua ideia pelo formulário, WhatsApp ou e-mail.</p>
+          </li>
+          <li class="timeline-step reveal">
+            <span class="step-number">02</span>
+            <h3>Briefing</h3>
+            <p>Conversamos a fundo sobre objetivos, público, prazos e orçamento.</p>
+          </li>
+          <li class="timeline-step reveal">
+            <span class="step-number">03</span>
+            <h3>Desenvolvimento</h3>
+            <p>Roteiro, captação, edição e criação — a colmeia em ação.</p>
+          </li>
+          <li class="timeline-step reveal">
+            <span class="step-number">04</span>
+            <h3>Revisões</h3>
+            <p>Você acompanha e sugere ajustes até o resultado ficar do seu jeito.</p>
+          </li>
+          <li class="timeline-step reveal">
+            <span class="step-number">05</span>
+            <h3>Entrega</h3>
+            <p>Material final entregue nos formatos certos para cada plataforma.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         5. PORTFÓLIO / CASES
+         ===================================================== -->
+    <section class="section section--navy" id="portfolio">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow eyebrow--gold">Portfólio</p>
+          <h2 class="section-title">Projetos e cases</h2>
+        </header>
+
+        <!--
+          COMO ADICIONAR UM PROJETO:
+          1. Copie um <article class="portfolio-card">.
+          2. Troque o <div class="portfolio-media"> por uma imagem:
+               <img class="portfolio-media" src="assets/img/portfolio/projeto.jpg" alt="Descrição">
+             ou por um vídeo incorporado (YouTube/Vimeo):
+               <div class="portfolio-media"><iframe src="https://www.youtube.com/embed/ID" title="Nome do vídeo" allowfullscreen></iframe></div>
+          3. Atualize a categoria, o título e a descrição.
+        -->
+        <div class="portfolio-grid">
+          <article class="portfolio-card reveal">
+            <div class="portfolio-media portfolio-media--placeholder">
+              <span class="badge">Em produção</span>
+            </div>
+            <div class="portfolio-body">
+              <p class="portfolio-category">Documentário</p>
+              <h3>Documentário-piloto: histórias de resistência</h3>
+              <p>Nosso primeiro documentário, dedicado a vozes femininas e memórias que resistem ao tempo.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="portfolio-media portfolio-media--placeholder">
+              <span class="badge badge--muted">Em breve</span>
+            </div>
+            <div class="portfolio-body">
+              <p class="portfolio-category">Categoria</p>
+              <h3>Título do projeto</h3>
+              <p>Breve descrição do projeto a ser adicionada.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="portfolio-media portfolio-media--placeholder">
+              <span class="badge badge--muted">Em breve</span>
+            </div>
+            <div class="portfolio-body">
+              <p class="portfolio-category">Categoria</p>
+              <h3>Título do projeto</h3>
+              <p>Breve descrição do projeto a ser adicionada.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         6. DEPOIMENTOS (carrossel)
+         ===================================================== -->
+    <section class="section section--paper" id="depoimentos">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">Depoimentos</p>
+          <h2 class="section-title">Quem já voou com a gente</h2>
+        </header>
+
+        <div class="carousel reveal" aria-roledescription="carrossel" aria-label="Depoimentos de clientes">
+          <div class="carousel-track">
+            <!-- TODO: substituir textos dos depoimentos -->
+            <figure class="testimonial is-active" aria-roledescription="slide" aria-label="1 de 2">
+              <blockquote>
+                <p>Texto do depoimento a ser preenchido. Espaço reservado para a opinião da cliente sobre o trabalho da Apys Produções.</p>
+              </blockquote>
+              <figcaption>
+                <span class="testimonial-avatar" aria-hidden="true">V</span>
+                <span><strong>Vera</strong><br><small>Cliente</small></span>
+              </figcaption>
+            </figure>
+
+            <figure class="testimonial" aria-roledescription="slide" aria-label="2 de 2">
+              <blockquote>
+                <p>Texto do depoimento a ser preenchido. Espaço reservado para a opinião da cliente sobre o trabalho da Apys Produções.</p>
+              </blockquote>
+              <figcaption>
+                <span class="testimonial-avatar" aria-hidden="true">E</span>
+                <span><strong>Elaine</strong><br><small>Cliente</small></span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="carousel-controls">
+            <button class="carousel-btn" data-dir="-1" aria-label="Depoimento anterior">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <div class="carousel-dots" role="tablist" aria-label="Escolher depoimento"></div>
+            <button class="carousel-btn" data-dir="1" aria-label="Próximo depoimento">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         7. PREÇOS / PLANOS
+         ===================================================== -->
+    <section class="section section--gold pricing" id="precos">
+      <div class="container pricing-inner reveal">
+        <p class="eyebrow eyebrow--wine">Preços e planos</p>
+        <h2 class="section-title">Solicite um orçamento personalizado</h2>
+        <p class="pricing-text">
+          Cada projeto é único. Conte o que você precisa e montamos uma proposta
+          sob medida para a sua história e o seu orçamento.
+        </p>
+        <a href="#contato" class="btn btn--navy">Falar com a Apys</a>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         8. FAQ (acordeão)
+         ===================================================== -->
+    <section class="section section--paper" id="faq">
+      <div class="container container--narrow">
+        <header class="section-header reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section-title">Perguntas frequentes</h2>
+        </header>
+
+        <!--
+          Acordeão acessível: cada item usa <button aria-expanded> + painel.
+          TODO: substituir as respostas pelos textos finais.
+        -->
+        <div class="accordion reveal">
+          <div class="accordion-item">
+            <h3>
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-1" id="faq-1-btn">
+                Qual o prazo médio de entrega de um projeto?
+                <span class="accordion-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq-1" role="region" aria-labelledby="faq-1-btn" hidden>
+              <p>O prazo varia conforme o tipo e a complexidade do projeto. Após o briefing, enviamos um cronograma detalhado com todas as etapas até a entrega.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3>
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">
+                As informações e materiais são mantidos em sigilo?
+                <span class="accordion-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq-2" role="region" aria-labelledby="faq-2-btn" hidden>
+              <p>Sim. Todas as informações e materiais compartilhados conosco são tratados com total confidencialidade.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3>
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">
+                Vocês oferecem garantias sobre o resultado final?
+                <span class="accordion-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq-3" role="region" aria-labelledby="faq-3-btn" hidden>
+              <p>Trabalhamos com etapas de revisão combinadas previamente, para que o resultado final esteja alinhado ao que foi acordado no briefing.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3>
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">
+                Quais formas de pagamento são aceitas?
+                <span class="accordion-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq-4" role="region" aria-labelledby="faq-4-btn" hidden>
+              <p>Resposta a ser preenchida (ex.: Pix, transferência bancária, cartão, parcelamento).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         9. CONTATO
+         ===================================================== -->
+    <section class="section section--wine" id="contato">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow eyebrow--gold">Contato</p>
+          <h2 class="section-title">Vamos construir essa colmeia juntos?</h2>
+          <p>Preencha o formulário ou fale com a gente pelos canais abaixo. Respondemos o mais rápido possível.</p>
+
+          <!-- TODO: substituir pelos links e contatos reais -->
+          <ul class="contact-links">
+            <li>
+              <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.4L3 21Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2L9 9.5Z"/></svg>
+                <span>WhatsApp</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contato@apysproducoes.com.br">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                <span>contato@apysproducoes.com.br</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3V9Z"/></svg>
+                <span>YouTube</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!--
+          FORMULÁRIO DE CONTATO
+          Atualmente o envio abre o app de e-mail do visitante (mailto) como fallback.
+          Para receber mensagens direto, use um serviço como Formspree/Getform:
+            1. Crie o formulário no serviço e copie a URL de envio.
+            2. Coloque a URL em data-endpoint="" abaixo (ex.: https://formspree.io/f/xxxx).
+          O script js/main.js cuida do resto.
+        -->
+        <form class="contact-form reveal" id="contact-form" data-endpoint="" data-mailto="contato@apysproducoes.com.br" novalidate>
+          <div class="form-field">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="form-field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="form-field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn btn--gold btn--block">Enviar mensagem</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================
+       10. RODAPÉ
+       ===================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="logo footer-logo" src="assets/img/logo-apys-dourado.png" alt="Apys" width="921" height="603" loading="lazy">
+        <p><strong>Apys Produções</strong><br>Produtora audiovisual independente</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Links úteis">
+        <h2 class="footer-title">Links úteis</h2>
+        <ul>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-social">
+        <h2 class="footer-title">Redes sociais</h2>
+        <!-- TODO: substituir pelos links reais -->
+        <ul class="social-icons">
+          <li><a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>
+          </a></li>
+          <li><a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3V9Z"/></svg>
+          </a></li>
+          <li><a href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.4L3 21Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2L9 9.5Z"/></svg>
+          </a></li>
+          <li><a href="mailto:contato@apysproducoes.com.br" aria-label="E-mail">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="ano-atual">2026</span> Apys Produções. Todos os direitos reservados.</p>
+        <a href="#topo" class="back-to-top">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
