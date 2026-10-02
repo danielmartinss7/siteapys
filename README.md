@@ -41,13 +41,15 @@ Todas as cores e fontes ficam em `:root`, no início de `css/style.css`.
 ## O que falta preencher (procure por `TODO` no código)
 
 1. **Logo em alta resolução:** os PNGs em `assets/img/` foram recortados do manual de aplicações e têm resolução limitada. Substitua pelos arquivos originais, de preferência em **SVG**, com os mesmos nomes.
-2. **Fotos da equipe:** em "Sobre nós", troque cada `<div class="team-photo">` por `<img class="team-photo" src="..." alt="...">`. O recorte hexagonal é aplicado sozinho.
-3. **Portfólio:** as instruções estão no comentário acima de `.portfolio-grid`. Os cards aceitam imagem ou vídeo incorporado (YouTube ou Vimeo).
-4. **Depoimentos:** preencha os textos de Vera e Elaine. Para adicionar mais, copie um `<figure class="testimonial">`; os pontos de navegação são gerados automaticamente.
-5. **FAQ:** revise as respostas (a de formas de pagamento ainda é um texto provisório).
-6. **Contatos e redes sociais:** número de WhatsApp (`wa.me/55...`), e-mail, Instagram e YouTube, na seção Contato e no rodapé.
-7. **Formulário:** sem configuração, o botão abre o app de e-mail de quem está visitando. Para receber as mensagens direto, crie um formulário no [Formspree](https://formspree.io) (ou serviço parecido) e cole a URL no atributo `data-endpoint` do `<form id="contact-form">`.
-8. **Imagem de compartilhamento** (`og:image`, 1200×630) no `<head>`.
+2. **Textos finais:** história da produtora (em "Sobre nós") e respostas do FAQ.
+3. **Formulário:** sem configuração, o botão abre o app de e-mail de quem está visitando. Para receber as mensagens direto, crie um formulário no [Formspree](https://formspree.io) (ou serviço parecido) e cole a URL no atributo `data-endpoint` do `<form id="contact-form">`.
+4. **Imagem de compartilhamento** (`og:image`, 1200×630) no `<head>`.
+
+## Como atualizar conteúdo
+
+- **Fotos da equipe:** `assets/img/equipe/` (quadradas, 400×400, rosto centralizado). O recorte hexagonal é aplicado pelo CSS.
+- **Portfólio:** capas em `assets/img/portfolio/` (16:9). O comentário acima de `.portfolio-grid` explica como adicionar novos projetos.
+- **Contatos:** WhatsApp, e-mail e Instagram aparecem na seção Contato e no rodapé (e o e-mail também em `data-mailto` do formulário).
 
 ## Acessibilidade e desempenho
 

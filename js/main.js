@@ -5,7 +5,7 @@
    2. Menu mobile (hambúrguer)
    3. Destaque do link ativo na navegação
    4. Scroll reveal (animações de entrada)
-   5. Carrossel de depoimentos
+   5. Botão "Voltar ao topo"
    6. Acordeão do FAQ
    7. Formulário de contato (validação + envio)
    8. Ano atual no rodapé
@@ -120,79 +120,16 @@
 
 
   /* ------------------------------------------------------------------------
-     5. CARROSSEL DE DEPOIMENTOS
-     Para adicionar depoimentos, basta incluir novos <figure class="testimonial">
-     no HTML — os pontos de navegação são gerados automaticamente.
+     5. VOLTAR AO TOPO
+     Rola suavemente até o início da página (sem JS, o link #home já funciona).
      ------------------------------------------------------------------------ */
-  var carousel = document.querySelector('.carousel');
-
-  if (carousel) {
-    var slides = carousel.querySelectorAll('.testimonial');
-    var dotsWrap = carousel.querySelector('.carousel-dots');
-    var current = 0;
-    var autoplayTimer = null;
-    var AUTOPLAY_MS = 7000;
-
-    // Cria os pontos
-    slides.forEach(function (slide, i) {
-      var dot = document.createElement('button');
-      dot.className = 'carousel-dot';
-      dot.type = 'button';
-      dot.setAttribute('role', 'tab');
-      dot.setAttribute('aria-label', 'Depoimento ' + (i + 1));
-      dot.addEventListener('click', function () { goTo(i); restartAutoplay(); });
-      dotsWrap.appendChild(dot);
+  document.querySelectorAll('.back-to-top').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+      if (history.replaceState) history.replaceState(null, '', location.pathname + location.search);
     });
-    var dots = dotsWrap.querySelectorAll('.carousel-dot');
-
-    function goTo(index) {
-      current = (index + slides.length) % slides.length;
-      slides.forEach(function (s, i) {
-        var active = i === current;
-        s.classList.toggle('is-active', active);
-        s.setAttribute('aria-hidden', String(!active));
-      });
-      dots.forEach(function (d, i) {
-        d.setAttribute('aria-selected', String(i === current));
-      });
-    }
-
-    carousel.querySelectorAll('.carousel-btn').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        goTo(current + Number(btn.dataset.dir));
-        restartAutoplay();
-      });
-    });
-
-    // Gesto de arrastar (swipe) no celular
-    var touchStartX = null;
-    carousel.addEventListener('touchstart', function (e) {
-      touchStartX = e.touches[0].clientX;
-    }, { passive: true });
-    carousel.addEventListener('touchend', function (e) {
-      if (touchStartX === null) return;
-      var dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 50) { goTo(current + (dx < 0 ? 1 : -1)); restartAutoplay(); }
-      touchStartX = null;
-    });
-
-    // Troca automática (pausa ao passar o mouse ou focar)
-    function startAutoplay() {
-      if (prefersReducedMotion || slides.length < 2) return;
-      stopAutoplay();
-      autoplayTimer = setInterval(function () { goTo(current + 1); }, AUTOPLAY_MS);
-    }
-    function stopAutoplay() { clearInterval(autoplayTimer); }
-    function restartAutoplay() { stopAutoplay(); startAutoplay(); }
-
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
-    carousel.addEventListener('focusin', stopAutoplay);
-    carousel.addEventListener('focusout', startAutoplay);
-
-    goTo(0);
-    startAutoplay();
-  }
+  });
 
 
   /* ------------------------------------------------------------------------

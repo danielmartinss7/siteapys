@@ -11,13 +11,12 @@
    7.  Serviços
    8.  Como funciona (linha do tempo)
    9.  Portfólio
-   10. Depoimentos (carrossel)
-   11. Preços
-   12. FAQ (acordeão)
-   13. Contato (formulário)
-   14. Rodapé
-   15. Animações (scroll reveal)
-   16. Media queries (tablet / desktop)
+   10. Preços
+   11. FAQ (acordeão)
+   12. Contato (formulário)
+   13. Rodapé
+   14. Animações (scroll reveal)
+   15. Media queries (tablet / desktop)
    ========================================================================== */
 
 
@@ -471,12 +470,12 @@ body.nav-open { overflow: hidden; }
   box-shadow: 0 18px 36px -18px rgba(27, 21, 48, .45);
 }
 
-/* Foto (placeholder com iniciais em formato hexagonal, remetendo ao favo) */
+/* Foto da equipe em formato hexagonal, remetendo ao favo de mel */
 .team-photo {
   display: grid;
   place-items: center;
-  width: 120px;
-  height: 132px;
+  width: 140px;
+  height: 154px;
   margin: 0 auto 1.25rem;
   object-fit: cover;
   background: linear-gradient(135deg, var(--navy), var(--blue));
@@ -627,11 +626,20 @@ body.nav-open { overflow: hidden; }
   object-fit: cover;
   background: var(--blue);
 }
+.portfolio-media img,
 .portfolio-media iframe {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border: 0;
 }
+
+/* Projeto em destaque (card único): ocupa a largura toda e, no desktop,
+   mostra capa e texto lado a lado — ver media query de desktop */
+.portfolio-card--featured {
+  grid-column: 1 / -1;
+}
+.portfolio-card--featured .portfolio-body h3 { font-size: clamp(1.4rem, 3.5vw, 1.9rem); }
 
 /* Placeholder: textura de "película" com hexágono */
 .portfolio-media--placeholder {
@@ -699,133 +707,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ==========================================================================
-   10. DEPOIMENTOS (CARROSSEL)
-   ========================================================================== */
-.carousel {
-  max-width: 760px;
-  margin-inline: auto;
-}
-
-.carousel-track {
-  display: grid; /* todos os slides ocupam a mesma célula; a altura se ajusta ao maior */
-}
-
-.testimonial {
-  grid-area: 1 / 1;
-  margin: 0;
-  padding: 2.5rem 1.75rem 2rem;
-  background: var(--white);
-  border: 1px solid var(--paper-dark);
-  border-radius: var(--radius);
-  box-shadow: 0 16px 40px -24px rgba(27, 21, 48, .4);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(20px);
-  transition: opacity .5s var(--ease), transform .5s var(--ease), visibility .5s;
-}
-.testimonial.is-active {
-  opacity: 1;
-  visibility: visible;
-  transform: none;
-}
-
-.testimonial blockquote {
-  position: relative;
-  margin: 0 0 1.75rem;
-  font-family: var(--font-title);
-  font-style: italic;
-  font-size: clamp(1.15rem, 3vw, 1.4rem);
-  line-height: 1.55;
-  color: var(--navy);
-}
-/* Aspas decorativas */
-.testimonial blockquote::before {
-  content: "“";
-  display: block;
-  height: 2.2rem;
-  font-size: 4.5rem;
-  line-height: 1;
-  color: var(--gold);
-}
-
-.testimonial figcaption {
-  display: flex;
-  align-items: center;
-  gap: .9rem;
-  line-height: 1.3;
-}
-.testimonial figcaption strong { color: var(--wine); font-size: 1.05rem; }
-.testimonial figcaption small { color: var(--ink-soft); }
-
-.testimonial-avatar {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  background: var(--wine);
-  color: var(--gold);
-  font-family: var(--font-title);
-  font-weight: 700;
-  border-radius: 50%;
-}
-
-.carousel-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-  margin-top: 2rem;
-}
-
-.carousel-btn {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  background: var(--navy);
-  border: 0;
-  border-radius: 50%;
-  transition: background-color .25s;
-}
-.carousel-btn:hover { background: var(--blue); }
-.carousel-btn svg {
-  width: 22px;
-  fill: none;
-  stroke: var(--gold);
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.carousel-dots { display: flex; gap: .4rem; }
-/* Área de toque de 24px, com o ponto visível desenhado por ::before */
-.carousel-dot {
-  display: grid;
-  place-items: center;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  background: none;
-  border: 0;
-}
-.carousel-dot::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--paper-dark);
-  border: 1px solid var(--terracotta);
-  transition: background-color .25s, width .25s;
-}
-.carousel-dot[aria-selected="true"]::before {
-  width: 22px;
-  border-radius: 999px;
-  background: var(--terracotta);
-}
-
-
-/* ==========================================================================
-   11. PREÇOS
+   10. PREÇOS
    ========================================================================== */
 .pricing-inner {
   max-width: 760px;
@@ -850,7 +732,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ==========================================================================
-   12. FAQ (ACORDEÃO)
+   11. FAQ (ACORDEÃO)
    ========================================================================== */
 .accordion {
   border-top: 1px solid rgba(115, 3, 13, .2);
@@ -914,7 +796,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ==========================================================================
-   13. CONTATO
+   12. CONTATO
    ========================================================================== */
 .contact-grid {
   display: grid;
@@ -1017,7 +899,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ==========================================================================
-   14. RODAPÉ
+   13. RODAPÉ
    ========================================================================== */
 .site-footer {
   position: relative;
@@ -1087,7 +969,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ==========================================================================
-   15. ANIMAÇÕES — SCROLL REVEAL
+   14. ANIMAÇÕES — SCROLL REVEAL
    Elementos com .reveal começam levemente deslocados e transparentes;
    o JS adiciona .is-visible quando entram na tela.
    A classe .js no <html> garante que, sem JavaScript, tudo fique visível.
@@ -1116,7 +998,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ==========================================================================
-   16. MEDIA QUERIES (mobile-first → telas maiores)
+   15. MEDIA QUERIES (mobile-first → telas maiores)
    ========================================================================== */
 
 /* ---------- Tablet (≥ 640px) ---------- */
@@ -1134,8 +1016,6 @@ body.nav-open { overflow: hidden; }
     flex-direction: row;
     justify-content: space-between;
   }
-
-  .testimonial { padding: 3rem 3rem 2.5rem; }
 
   .hero-stamp { width: 300px; right: -40px; bottom: -40px; }
 }
@@ -1219,6 +1099,23 @@ body.nav-open { overflow: hidden; }
     left: 50%;
     top: -5rem;
     transform: translateX(-50%);
+  }
+
+  .portfolio-card--featured {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .portfolio-card--featured .portfolio-media {
+    flex: 1.5;
+    aspect-ratio: auto;
+    min-height: 360px;
+  }
+  .portfolio-card--featured .portfolio-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem;
   }
 
   .contact-grid {
